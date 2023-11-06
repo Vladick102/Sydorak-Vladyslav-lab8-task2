@@ -1,2 +1,13 @@
 def validate_board(board: list) -> bool:
-    pass
+    def check_for_dups(field: list) -> bool:
+        for line in field:
+            line_of_nums = line.strip('*')
+            line_of_nums = line_of_nums.replace(' ', '')
+            if any(line_of_nums.count(x) > 1 for x in line_of_nums):
+                return False
+            if '0' in line_of_nums:
+                return False
+        return True
+
+    if not check_for_dups(board):
+        return False
