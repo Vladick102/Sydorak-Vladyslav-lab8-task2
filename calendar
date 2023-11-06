@@ -1,3 +1,21 @@
+'''
+The logic puzzle game board has a square shape with 9×9 cells.
+The board contains cells of different colors that are used in
+the game and white areas that are not used for the game. 
+The validate_board function is used to determine
+if the logic puzzle board is ready to start the game.
+The cells of the board must be filled in according to the
+following rules before the game starts:
+
+1) The colored cells of each row must contain
+numbers from 1 to 9 without repetition.
+
+2) The colored cells of each column must contain
+digits from 1 to 9 without repetition.
+
+3) Each block of cells of the same color must contain
+digits from 1 to 9 without repetition.
+'''
 def validate_board(board: list) -> bool:
     '''
     The validate_board(board) function returns a Boolean value.
