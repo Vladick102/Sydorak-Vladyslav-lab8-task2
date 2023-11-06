@@ -11,3 +11,14 @@ def validate_board(board: list) -> bool:
 
     if not check_for_dups(board):
         return False
+
+    column = []
+    list_of_columns = []
+    for num_column in range(9):
+        for line in board:
+            column += [line[num_column]]
+        list_of_columns += [''.join(column)]
+        column = []
+
+    if not check_for_dups(list_of_columns):
+        return False
