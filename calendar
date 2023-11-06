@@ -72,6 +72,6 @@ def validate_board(board: list) -> bool:
         angle = []
         line += 1
 
-    if check_for_dups(colors):
+    if not check_for_dups(colors):
         return False
     return True
